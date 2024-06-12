@@ -6,6 +6,7 @@ export const cityRouter = new Hono();
 
 // Get all cities      api/cities
 cityRouter.get('/cities', adminRoleAuth, getAllCities);
+//hhh
 // Get a single city   api/cities/1
 cityRouter.get('/cities/:id', adminRoleAuth, getCityById);
 // Search cities by name  api/cities/search/name
