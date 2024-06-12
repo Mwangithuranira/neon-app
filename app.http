@@ -1,0 +1,765 @@
+###
+//register
+POST http://localhost:8000/api/register
+Content-Type: application/json
+
+{
+    "userId": 1,
+    "username": "mwangi",
+    "password": "pass",
+    "email": "john@gmail.com",
+    "role": "driver"
+}
+
+
+
+
+
+
+###
+//login
+POST http://localhost:8000/api/login
+Content-Type: application/json
+
+{
+
+
+    "username": "mwangi",
+    "password": "pass"
+  
+}
+
+
+
+
+
+###
+//USER TABLE **************** 1
+GET http://localhost:8000/api/users
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTc0OTU2fQ.Z0k02N2tlOkrYDFbIWONFee28Dfd6JSJMeMH69XWum4
+
+###
+GET http://localhost:8000/api/users/1
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtd2FuZ2kiLCJyb2xlIjoidXNlciIsImV4cCI6MTcyMTExMDI5OH0.ydX_43oQS9VlvXYPqL04ZjjmncMt-BoYcIfZ6K-70Tw
+
+###
+
+GET http://localhost:8000/api/users?limit=7
+//Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtd2FuZ2kiLCJyb2xlIjoidXNlciIsImV4cCI6MTcyMTEyNjU4Nn0.AbwPTWDuGyKCtJarv93Zrj4y3ID9L7MbdZD6H43wXc4
+//admin
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTEwNjk0fQ.YyCT0-GR3v0YANVIxSr0DFPD9QFJ2oSeFt-2j4F2Oic
+###
+
+
+
+GET http://localhost:8000/api/users?limit=7&offset=2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTEwNjk0fQ.YyCT0-GR3v0YANVIxSr0DFPD9QFJ2oSeFt-2j4F2Oic
+###
+
+POST http://localhost:8000/api/users
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtd2FuZ2kiLCJyb2xlIjoidXNlciIsImV4cCI6MTcyMTEyNjU4Nn0.AbwPTWDuGyKCtJarv93Zrj4y3ID9L7MbdZD6H43wXc4
+Content-Type: application/json
+
+  {
+    "id": 15,
+    "name": "Kevin",
+    "contact_phone": "9560667",
+    "phone_verified": true,
+    "email": "glory@gmail.com",
+    "email_verified": true,
+    "confirmation_code": "2996075",
+    "password": "4907605",
+    "created_at": "2024-06-10",
+    "updated_at": "2024-06-10"
+  }
+
+###
+
+PUT http://localhost:8000/api/users/15
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTc0OTU2fQ.Z0k02N2tlOkrYDFbIWONFee28Dfd6JSJMeMH69XWum4
+Content-Type: application/json
+
+{
+    "name": "Kevin"
+}
+###
+DELETE http://localhost:8000/api/users/19
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+
+
+
+###
+
+//RESTAURANT TABLE **************** 2
+GET http://localhost:8000/api/restaurants
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+GET http://localhost:8000/api/restaurants/7
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkb2UiLCJyb2xlIjoicmVzdGF1cmFudF9vd25lciIsImV4cCI6MTcyMTE3NTI3M30.7_8xjMr28l3iNObo-yMfCmq0ALPkpBYXL5Q0sNx1EwY
+
+###
+GET http://localhost:8000/api/restaurants?limit=7
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+GET http://localhost:8000/api/restaurants?limit=7&offset=2
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+POST http://localhost:8000/api/restaurants
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+Content-Type: application/json
+
+  {
+    "id": 1,
+    "name": "KFC",
+    "street_address": "240",
+    "zip_code": "241",
+    "city_id": 1,
+    "created_at": "2024-06-08",
+    "updated_at": "2024-06-08"
+  }
+
+###
+PUT http://localhost:8000/api/restaurants/1
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkb2UiLCJyb2xlIjoicmVzdGF1cmFudF9vd25lciIsImV4cCI6MTcyMTE3NTI3M30.7_8xjMr28l3iNObo-yMfCmq0ALPkpBYXL5Q0sNx1EwY
+Content-Type: application/json
+
+{
+    "name": "KFL"
+}
+ 
+###
+DELETE http://localhost:8000/api/restaurants/12
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+
+
+###
+//ADDRESS TABLE **************** 3
+GET http://localhost:8000/api/addresses
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTA5NjczfQ.uYRyU37JDd9AgvifFpHhreh2JcI0JqngRdZB3a7cYmg
+
+###
+GET http://localhost:8000/api/addresses/5
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+GET http://localhost:8000/api/addresses?limit=7
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+GET http://localhost:8000/api/addresses?limit=7&offset=2
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+POST http://localhost:8000/api/addresses
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+Content-Type: application/json
+
+  {
+    "id": 8,
+    "street_address": "240",
+    "zip_code": "241",
+    "city_id": 1,
+    "created_at": "2024-06-08",
+    "updated_at": "2024-06-08"
+  }
+  
+
+###
+PUT http://localhost:8000/api/addresses/8
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+Content-Type: application/json
+  
+  {
+      "city_id": "4"
+  }
+
+###
+DELETE http://localhost:8000/api/addresses/12
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+
+###
+//CATEGORY TABLE **************** 4
+GET http://localhost:8000/api/categories
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTA5NjczfQ.uYRyU37JDd9AgvifFpHhreh2JcI0JqngRdZB3a7cYmg
+
+###
+GET http://localhost:8000/api/categories/5
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtd2FuZ2kiLCJyb2xlIjoidXNlciIsImV4cCI6MTcyMTExMDI5OH0.ydX_43oQS9VlvXYPqL04ZjjmncMt-BoYcIfZ6K-70Tw
+
+###
+GET http://localhost:8000/api/categories?limit=7
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+GET http://localhost:8000/api/categories?limit=7&offset=2
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+POST http://localhost:8000/api/categories
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+Content-Type: application/json
+
+  {
+    "id": 8,
+    "name": "Fast Food",
+    "created_at": "2024-06-08",
+    "updated_at": "2024-06-08"
+  }
+
+
+###
+PUT http://localhost:8000/api/categories/8
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+Content-Type: application/json
+
+{
+    "name": "Fast Food"
+}
+
+
+###
+DELETE http://localhost:8000/api/categories/8
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+
+
+###
+//CITY TABLE **************** 5
+GET http://localhost:8000/api/cities
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+GET http://localhost:8000/api/cities/5
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+GET http://localhost:8000/api/cities?limit=7
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+GET http://localhost:8000/api/cities?limit=7&offset=2
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+POST http://localhost:8000/api/cities
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+Content-Type: application/json
+
+  {
+    "id": 1,
+    "name": "Nairobi",
+    "created_at": "2024-06-08",
+    "updated_at": "2024-06-08"
+  }
+
+
+###
+PUT http://localhost:8000/api/cities/8
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+Content-Type: application/json
+
+{
+    "name": "Nairobi"
+}
+
+
+###
+DELETE http://localhost:8000/api/cities/40
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+
+
+
+
+###
+//COMMENT TABLE **************** 6
+GET http://localhost:8000/api/comments
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+GET http://localhost:8000/api/comments/5
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+GET http://localhost:8000/api/comments?limit=7
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+GET http://localhost:8000/api/comments?limit=7&offset=2
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+POST http://localhost:8000/api/comments
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+Content-Type: application/json
+
+  {
+    "id": 8,
+    "comment": "The food was great",
+    "rating": 4,
+    "user_id": 1,
+    "restaurant_id": 1,
+    "created_at": "2024-06-08",
+    "updated_at": "2024-06-08"
+  }
+
+
+###
+PUT http://localhost:8000/api/comments/8
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+Content-Type: application/json
+
+  {
+    "id": 8,
+    "comment": "The food was great",
+    "rating": 4,
+    "user_id": 1,
+    "restaurant_id": 1,
+    "created_at": "2024-06-08",
+    "updated_at": "2024-06-08"
+  }
+
+
+###
+DELETE http://localhost:8000/api/comments/12
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+
+
+###
+//DRIVER TABLE **************** 7
+GET http://localhost:8000/api/drivers
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+
+###
+GET http://localhost:8000/api/drivers/6
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtd2FuZ2kiLCJyb2xlIjoiZHJpdmVyIiwiZXhwIjoxNzIxMTc1ODk4fQ.IRdbb0r0Kf9W0AvCBYvu6wS1XbDx4Ott3hSzb9GmkdU
+
+
+###
+GET http://localhost:8000/api/drivers?limit=7
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+GET http://localhost:8000/api/drivers?limit=7&offset=2
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+ 
+###
+POST http://localhost:8000/api/drivers
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+Content-Type: application/json
+
+    {
+    "id": 16,
+    "car_make": "tayota",
+    "car_model": "toyata",
+    "car_year": 2016,
+    "user_id": 5,
+    "online": true,
+    "delivering": true,
+    "created_at": "2024-06-08",
+    "updated_at": "2024-06-08"
+  }
+
+
+###
+PUT http://localhost:8000/api/drivers/16
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huIiwicm9sZSI6ImRyaXZlciIsImV4cCI6MTcyMTEyNDk1MH0.h3Po2YhAaIsXRs-ucghjuZWqX57lwaJS8niz1XzRwQM
+Content-Type: application/json
+
+{
+    "car_make": "tayota",
+    "car_model": "toyata",
+    "car_year": 2016,
+    "user_id": 5,
+    "online": true,
+    "delivering": true,
+    "created_at": "2024-06-08",
+    "updated_at": "2024-06-08"
+}
+
+
+###
+DELETE http://localhost:8000/api/drivers/17
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+
+
+###
+//STATE   TABLE **************** 8
+GET http://localhost:8000/api/states
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4 
+
+###
+GET http://localhost:8000/api/states/5
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+GET http://localhost:8000/api/states?limit=7
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+GET http://localhost:8000/api/states?limit=7&offset=2
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+POST http://localhost:8000/api/states
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+Content-Type: application/json
+
+  {
+    "id": 8,
+    "name": "Nairobi",
+    "created_at": "2024-06-08",
+    "updated_at": "2024-06-08"
+  }
+
+
+###
+PUT http://localhost:8000/api/states/8
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+Content-Type: application/json
+
+{
+    "name": "Nairobi"
+}
+
+
+###
+DELETE http://localhost:8000/api/states/40
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+
+
+###
+//MENU_ITEM TABLE **************** 9
+GET http://localhost:8000/api/menu-items
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+
+###
+GET http://localhost:8000/api/menu-items/5
+Authorization:
+
+
+###
+GET http://localhost:8000/api/menu-items?limit=7
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+
+###
+GET http://localhost:8000/api/menu-items?limit=7&offset=2
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+
+###
+POST http://localhost:8000/api/menu-items
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+Content-Type: application/json
+
+  {
+    "id": 8,
+    "name": "Chips",
+    "price": 200,
+    "restaurant_id": 1,
+    "created_at": "2024-06-08",
+    "updated_at": "2024-06-08"
+  }
+
+
+###
+PUT http://localhost:8000/api/menu-items/8
+Authorization:
+Content-Type: application/json
+
+{
+    "name": "Chips",
+    "price": 200,
+    "restaurant_id": 1,
+    "created_at": "2024-06-08",
+    "updated_at": "2024-06-08"
+}
+
+
+###
+DELETE http://localhost:8000/api/menu-items/90
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+
+
+###
+//ORDER TABLE ****************  10
+GET http://localhost:8000/api/orders
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbG9yeSIsInJvbGUiOiJyZXN0YXVyYW50X293bmVyIiwiZXhwIjoxNzIxMTI3MTkxfQ.7JoJrEkg7i4dwo-h8QvPK5nH2FefTc2TfS7yaweQylQ
+
+###
+GET http://localhost:8000/api/orders/19
+Authorization:
+
+
+###
+GET http://localhost:8000/api/orders?limit=7
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbG9yeSIsInJvbGUiOiJyZXN0YXVyYW50X293bmVyIiwiZXhwIjoxNzIxMTI3MTkxfQ.7JoJrEkg7i4dwo-h8QvPK5nH2FefTc2TfS7yaweQylQ
+
+
+###
+GET http://localhost:8000/api/orders?limit=7&offset=2
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbG9yeSIsInJvbGUiOiJyZXN0YXVyYW50X293bmVyIiwiZXhwIjoxNzIxMTI3MTkxfQ.7JoJrEkg7i4dwo-h8QvPK5nH2FefTc2TfS7yaweQylQ
+
+
+###
+POST http://localhost:8000/api/orders
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtd2FuZ2kiLCJyb2xlIjoidXNlciIsImV4cCI6MTcyMTExMDI5OH0.ydX_43oQS9VlvXYPqL04ZjjmncMt-BoYcIfZ6K-70Tw
+Content-Type: application/json
+
+  {
+    "id": 8,
+    "user_id": 1,
+    "restaurant_id": 1,
+    "driver_id": 1,
+    "total": 200,
+    "created_at": "2024-06-08",
+    "updated_at": "2024-06-08"
+  }
+
+
+###
+PUT http://localhost:8000/api/orders/8
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJtd2FuZ2kiLCJyb2xlIjoidXNlciIsImV4cCI6MTcyMTExMDI5OH0.ydX_43oQS9VlvXYPqL04ZjjmncMt-BoYcIfZ6K-70Tw
+Content-Type: application/json
+
+{
+    "user_id": 1,
+    "restaurant_id": 1,
+    "driver_id": 1,
+    "total": 200,
+    "created_at": "2024-06-08",
+    "updated_at": "2024-06-08"
+}
+
+
+###
+DELETE http://localhost:8000/api/orders/12
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+
+
+###
+//ORDER_MENU_ITEM  TABLE **************** 11
+GET http://localhost:8000/api/order-menu-items
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+
+###
+GET http://localhost:8000/api/order-menu-items/5
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+
+###
+GET http://localhost:8000/api/order-menu-items?limit=7
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+
+###
+GET http://localhost:8000/api/order-menu-items?limit=7&offset=2
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+
+###
+POST http://localhost:8000/api/order-menu-items
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+Content-Type: application/json
+
+  {
+    "id": 8,
+    "order_id": 1,
+    "menu_item_id": 1,
+    "quantity": 2,
+    "created_at": "2024-06-08",
+    "updated_at": "2024-06-08"
+  }
+
+
+###
+PUT http://localhost:8000/api/order-menu-items/8
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+Content-Type: application/json
+
+{
+    "order_id": 1,
+    "menu_item_id": 1,
+    "quantity": 2,
+    "created_at": "2024-06-08",
+    "updated_at": "2024-06-08"
+}
+
+
+###
+DELETE http://localhost:8000/api/order-menu-items/89
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+
+
+###
+//ORDER_STATUS  TABLE ****************  12
+GET http://localhost:8000/api/order-statuses
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4 
+
+
+###
+GET http://localhost:8000/api/order-statuses/5
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbG9yeSIsInJvbGUiOiJyZXN0YXVyYW50X293bmVyIiwiZXhwIjoxNzIxMTI3MTkxfQ.7JoJrEkg7i4dwo-h8QvPK5nH2FefTc2TfS7yaweQylQ
+
+
+###
+GET http://localhost:8000/api/order-statuses?limit=7
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+
+###
+GET http://localhost:8000/api/order-statuses?limit=7&offset=2
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+
+###
+POST http://localhost:8000/api/order-statuses
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+Content-Type: application/json
+
+  {
+    "id": 8,
+    "order_id": 1,
+    "status": "delivered",
+    "created_at": "2024-06-08",
+    "updated_at": "2024-06-08"
+  }
+
+
+###
+PUT http://localhost:8000/api/order-statuses/8
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+Content-Type: application/json
+
+{
+    "order_id": 1,
+    "status": "delivered",
+    "created_at": "2024-06-08",
+    "updated_at": "2024-06-08"
+}
+
+
+###
+DELETE http://localhost:8000/api/order-statuses/12
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+
+
+
+###
+//RESTAURANT_OWNER  TABLE ****************  13
+GET http://localhost:8000/api/restaurant-owners
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+GET http://localhost:8000/api/restaurant-owners/5
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbG9yeSIsInJvbGUiOiJyZXN0YXVyYW50X293bmVyIiwiZXhwIjoxNzIxMTI3MTkxfQ.7JoJrEkg7i4dwo-h8QvPK5nH2FefTc2TfS7yaweQylQ
+
+###
+GET http://localhost:8000/api/restaurant-owners?limit=7
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+GET http://localhost:8000/api/restaurant-owners?limit=7&offset=2
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+POST http://localhost:8000/api/restaurant-owners
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbG9yeSIsInJvbGUiOiJyZXN0YXVyYW50X293bmVyIiwiZXhwIjoxNzIxMTI3MTkxfQ.7JoJrEkg7i4dwo-h8QvPK5nH2FefTc2TfS7yaweQylQ
+Content-Type: application/json
+
+  {
+    "id": 8,
+    "user_id": 1,
+    "restaurant_id": 1,
+    "created_at": "2024-06-08",
+    "updated_at": "2024-06-08"
+  }
+
+
+###
+PUT http://localhost:8000/api/restaurant-owners/8
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbG9yeSIsInJvbGUiOiJyZXN0YXVyYW50X293bmVyIiwiZXhwIjoxNzIxMTI3MTkxfQ.7JoJrEkg7i4dwo-h8QvPK5nH2FefTc2TfS7yaweQylQ
+Content-Type: application/json
+
+{
+    "user_id": 1,
+    "restaurant_id": 1,
+    "created_at": "2024-06-08",
+    "updated_at": "2024-06-08"
+}
+
+
+###
+DELETE http://localhost:8000/api/restaurant-owners/60
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+
+
+###
+//STATUS_CATALOG  TABLE **************** 14
+GET http://localhost:8000/api/status-catalogs
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+GET http://localhost:8000/api/status-catalogs/5
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+GET http://localhost:8000/api/status-catalogs?limit=7
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+GET http://localhost:8000/api/status-catalogs?limit=7&offset=2
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+###
+POST http://localhost:8000/api/status-catalogs
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+Content-Type: application/json
+
+  {
+    "id": 8,
+    "status": "delivered",
+    "created_at": "2024-06-08",
+    "updated_at": "2024-06-08"
+  }
+
+
+###
+PUT http://localhost:8000/api/status-catalogs/8
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+Content-Type: application/json
+
+  {
+    "id": 8,
+    "status": "delivered",
+    "created_at": "2024-06-08",
+    "updated_at": "2024-06-08"
+  }
+
+
+###
+DELETE http://localhost:8000/api/status-catalogs/40
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huc29uIiwicm9sZSI6ImFkbWluIiwiZXhwIjoxNzIxMTI1Mjk1fQ.CazDdEz3KGkn-4v2qfO0XJU_y9D2_SWizQTZWM5-Ni4
+
+
+
